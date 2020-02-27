@@ -481,7 +481,7 @@ export var app = function(props) {
       listener
     )
     
-    body.dispatchEvent(new CustomEvent('hyperappDidMount'));
+    document.body.dispatchEvent(new CustomEvent('hyperappDidMount'));
   }
 
   dispatch(props.init)
