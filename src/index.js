@@ -480,7 +480,11 @@ export var app = function(props) {
       (vdom = getTextVNode(view(state))),
       listener
     )
+    
+    body.dispatchEvent(new CustomEvent('hyperappDidMount'));
   }
 
   dispatch(props.init)
+  
+  return dispatch;
 }
